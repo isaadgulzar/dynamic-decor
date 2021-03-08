@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body, html {
+    font-family: 'Roboto', sans-serif !important; 
+}
+:root {
+    --Dark : #231F20;
+    --Red : #B4332E;
+}
+.text-red {
+    color: var(--Red);
+}
+.bg-red {
+    background-color: var(--Red);
+}
+.border-red,.divide-red {
+    border-color: var(--Red) !important;
+}
+.text-dark {
+    color: var(--Dark );
+}
+.bg-dark {
+    background-color: var(--Dark );
+}
+.border-dark {
+    border-color: var(--Dark );
+}
+.nav-item {
+    text-underline-offset: 5px;
+    text-decoration-color: var(--Red) !important;
+}
+.nav-item:hover {
+    color: var(--Red);
+}
+.search-box-container {
+    width: 2.5rem;
+    animation: shrink .3s ease-in-out forwards;
+}
+.search-box-container:hover{
+    width: auto;
+    animation: expand .3s ease-in-out forwards;
+}
+.search-box {
+    display: none;
+}
+.search-box-container:hover .search-box {
+    display: block;
+    animation: expand .3s ease-in-out forwards;
+}
+
+@keyframes shrink {
+  from {width: 15rem;}
+  to {width: 2.5rem;}
+}
+@keyframes expand {
+    from {width:2.5rem;}
+    to {width:  15rem;}
+}
+.child {
+    visibility: hidden;
+    bottom: -9.75rem;
+}
+.c1 {
+    left: 0rem;
+}
+.dropChild {
+    visibility: hidden;
+}
+.parent:hover .child,.parent:hover .dropChild {
+    visibility: visible;
+}
+.dropTriangle {
+    width: 0px;
+    height: 0px;
+    border-top: 1rem solid transparent;
+    border-bottom:  1.7rem solid #fff ;
+    border-left:  1rem solid transparent;
+    border-right:  1rem solid transparent;
+}
+.dropTriangleWhite {
+    width: 0px;
+    height: 0px;
+    top: 0.25rem;
+    left: -.40rem;
+    border-top: 0.4rem solid transparent;
+    border-bottom: 0.6rem solid var(--Red);
+    border-left:  0.4rem solid transparent;
+    border-right:  0.4rem solid transparent;
+}
+/* Menu as a whole animated */
+.dropdown_menu--animated.block {
+    display: block;
+}
+.dropdown_menu--animated {
+    display: none;
+}
+.dropdown_menu--animated li{
+    display: list-item;
+    opacity: 1;
+}    
+.dropdown_menu-6 {
+    animation: growDown 350ms ease-in-out forwards;
+    transform-origin: top center;
+}
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+.animation-out{
+    width: 100%;
+    animation: slide-out .7s ease-in-out forwards;
+}
+@keyframes slide-out {
+    from {width: 100%;}
+    to {width: 0;}
+  }
+  .sidebar-animation {
+      width: 0px;
+      animation: slide .5s ease-in-out forwards;
+  }
+  @keyframes slide {
+    from {width: 0;}
+    to {width: 100%;}
+  }
