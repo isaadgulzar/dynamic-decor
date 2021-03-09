@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap');
 
 body, html {
     font-family: 'Roboto', sans-serif !important; 
+    scroll-behavior: smooth;
 }
 :root {
     --Dark : #231F20;
     --Red : #B4332E;
+    --DarkRed : #B5332E;
+}
+.bg-darkred {
+    background-color: var(--DarkRed);
 }
 .text-red {
     color: var(--Red);
@@ -31,6 +36,16 @@ body, html {
 }
 .nav-item:hover {
     color: var(--Red);
+}
+.nav-item.active {
+    color: var(--Red);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: var(--Red) !important;
+}
+.nav-dot.active {
+    background:white;
+    
 }
 .search-box-container {
     width: 2.5rem;
@@ -59,6 +74,9 @@ body, html {
 .child {
     visibility: hidden;
     bottom: -9.75rem;
+}
+#collection .child {
+    bottom: -10.75rem;
 }
 .c1 {
     left: 0rem;
