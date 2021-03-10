@@ -147,3 +147,35 @@ body, html {
     from {width: 0;}
     to {width: 100%;}
   }
+
+@media screen and (min-width: 1024px) {
+    #nav-dots-container {
+        position: fixed;
+        right: 0.3vw;
+    }
+}
+@media screen and (min-width: 1350px) {
+    #nav-dots-container {
+        position: fixed;
+        right: 3vw;
+    }
+}
+@media screen and (min-width: 1550px) {
+    #nav-dots-container {
+        position: fixed;
+        right: 5vw;
+    }
+}
+@media screen and (min-width: 1680px) {
+    #nav-dots-container {
+        position: fixed;
+        right: 12vw;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #nav-dots-container {
+        position: fixed;
+        right: 19vw;
+    }
+}
